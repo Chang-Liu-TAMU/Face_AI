@@ -1,0 +1,9 @@
+shayi03.jpg--> detect number: 1
+武林外传_白展堂_1_shayi_registration.jpg(box_prob:0.9994999766349792-dis_info:武林外传_白展堂_1_shayi_registration.jpg_0.81)
+
+shayi03.jpg--> detect number: 1
+武林外传_白展堂_1_shayi_registration.jpg(box_prob:0.9994999766349792-dis_info:武林外传_白展堂_1_shayi_registration.jpg_0.81)
+
+shayi03.jpg--> detect number: 1
+武林外传_白展堂_1_shayi_registration.jpg(box_prob:0.9994999766349792-dis_info:武林外传_白展堂_1_shayi_registration.jpg_0.81)
+
