@@ -5,6 +5,7 @@
 # @Email        : shawninjuly@gmail.com
 # ------------------------------------
 import os
+from urllib.parse import quote
 from typing import Optional
 from pydantic import BaseSettings
 from core.env_parser import EnvConfigs
@@ -78,7 +79,9 @@ class Settings(BaseSettings):
     AUTHORITY_TABLE: str = configs.database.db_authority_table
 
     # MySql地址
-    SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{MYSQL_USERNAME}:{MYSQL_PASSWORD}@" \
+    # SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{MYSQL_USERNAME}:{MYSQL_PASSWORD}@" \
+    #                           f"{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DATABASE}?charset=utf8mb4"
+    SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{MYSQL_USERNAME}:{quote(MYSQL_PASSWORD)}@" \
                               f"{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DATABASE}?charset=utf8mb4"
 
     REDIS_ENABLED: bool = configs.database.redis_enabled

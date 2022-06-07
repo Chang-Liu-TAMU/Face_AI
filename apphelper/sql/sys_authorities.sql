@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `sys_authorities` (
+    `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `authority_id` INT NOT NULL UNIQUE DEFAULT 100,
+    `authority_name` VARCHAR(32) NOT NULL,
+    `parent_id` INT NULL UNIQUE,
+    `is_delete` INT NOT NULL  DEFAULT 0,
+    `create_time` DATETIME(6)   DEFAULT CURRENT_TIMESTAMP(6),
+    `update_time` DATETIME(6)   DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='save sys authorities info';

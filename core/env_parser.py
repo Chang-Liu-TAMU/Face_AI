@@ -116,7 +116,8 @@ class EnvConfigs:
         self.host = os.getenv('HOST', "0.0.0.0")
         self.timeout = int(os.getenv("TIMEOUT", 300))
         self.reload = to_bool(os.getenv("RELOAD", False))
-        self.debug = to_bool(os.getenv("DEBUG", False))
+        # self.debug = to_bool(os.getenv("DEBUG", False))
+        self.debug = False
         self.daemon = to_bool(os.getenv("DAEMON", True))
         self.worker_class = os.getenv("WORKER_CLASS", "uvicorn.workers.UvicornH11Worker")
         self.backlog = int(os.getenv("BACKLOG", 2048))

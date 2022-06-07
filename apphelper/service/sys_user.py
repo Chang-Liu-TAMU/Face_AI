@@ -38,6 +38,7 @@ class CRUDUser(CRUDBase[SysUser, sys_user_schema.UserCreate, sys_user_schema.Use
         """
         return db.query(SysUser).filter(SysUser.username == username).first()
 
+
     def create(self, db: Session, *, obj_in: sys_user_schema.UserCreate) -> SysUser:
         db_obj = SysUser(
             username=obj_in.username,

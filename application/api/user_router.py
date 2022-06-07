@@ -106,18 +106,21 @@ async def login_access_token(
     """
 
     # decrypt password if necessary
+    print("checking encrption")
     if settings.ENCRYPTION_ENABLED:
         try:
             rsadate = RSAendecrypt(settings.RSA_FILE_PATH)
             password = rsadate.decrypt(password)
         except Exception as e:
+            print("I am logging")
             logger.warning(e.args)
-
+    print("db get token")
+    print("password: ", password)
     # get token by given username and password
     res_token = db_get_token(username=username, password=password, db=db)
     if isinstance(res_token, JSONResponse):
         return res_token
-
+    print("db get token finished")
     if res_token.data:
         token_model = TokenModel(token=res_token.data['token'], token_type=res_token.data["token_type"])
         return response_code.resp_200(data=token_model.dict())
