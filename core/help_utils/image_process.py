@@ -59,9 +59,10 @@ def get_save_image_text(bgr_image, boxes, boxes_name, landmarks=None,
     draw = ImageDraw.Draw(img_PIL)
 
     # 字体颜色
-    img_fraction = 1.6
+    # img_fraction = 1.6
+    img_fraction = 0.6
     cur_path = os.path.dirname(os.path.realpath(__file__))
-    font_path = os.path.join(cur_path, "ukai_.ttc")
+    font_path = os.path.join(cur_path, "ukai.ttc")
     for i, (label, box) in enumerate(list(zip(boxes_name, boxes))):
         fontsize = 10  # starting font size
         # portion of image width you want text width to be

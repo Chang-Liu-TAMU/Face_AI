@@ -807,7 +807,7 @@ class FaceMachine:
                                          extract_ga=draw_age_gender,
                                          limit_faces=limit_faces)
 
-        if len(dict_list) > 0:
+        if len(dict_list) > 0 and not isinstance(dict_list[0], str):
             data = await get_images_async(images, logger=self.logger)
             data = data[0].get('data')
             image = image_process.visualize_img(data=data, detections_dict=dict_list[0],

@@ -157,6 +157,10 @@ async def face_registration_upl(files: List[UploadFile] = File(None),
         output = {'status': 'error', "message": "operator '{0}' has not been supported!".format(operator)}
         return response_wrapper(output)
 
+    #debut
+    print(type(user_names))
+    print(type(user_names))
+    print(type(user_ids))
     user_groups = tools.parse_data(user_groups)
     user_names = tools.parse_data(user_names)
     user_ids = tools.parse_data(user_ids)
