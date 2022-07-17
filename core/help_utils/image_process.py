@@ -60,7 +60,7 @@ def get_save_image_text(bgr_image, boxes, boxes_name, landmarks=None,
 
     # 字体颜色
     # img_fraction = 1.6
-    img_fraction = 0.6
+    img_fraction = 1.0
     cur_path = os.path.dirname(os.path.realpath(__file__))
     font_path = os.path.join(cur_path, "ukai.ttc")
     for i, (label, box) in enumerate(list(zip(boxes_name, boxes))):

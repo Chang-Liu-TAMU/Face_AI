@@ -24,6 +24,7 @@ from fastapi.responses import UJSONResponse
 from fastapi.encoders import jsonable_encoder
 from starlette.responses import StreamingResponse
 
+
 from core.help_utils import tools
 from application.models.face_model import BodyExtract, BodyDraw, FaceRegister, FaceExtract
 from core import FaceAI
@@ -113,6 +114,7 @@ async def face_registration(data: FaceRegister):
                                                                 limit_faces=data.limit_faces)
 
     return response_wrapper(output=output)
+
 
 
 @router.post('/multipart/face_registration', tags=['FaceAI'])

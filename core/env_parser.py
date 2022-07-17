@@ -88,7 +88,8 @@ class Models:
         # retinaface_r50_v1, scrfd_10g_gnkps
         self.det_name = os.getenv("DET_NAME", "retinaface_r50_v1")
         # arcface_r100_v1, glintr100
-        self.rec_name = os.getenv("REC_NAME", "glintr100")
+        # self.rec_name = os.getenv("REC_NAME", "glintr100")
+        self.rec_name = os.getenv("REC_NAME", "custom_rec_model")
         self.ga_name = os.getenv("GA_NAME", "genderage_v1")
         self.rec_batch_size = int(os.getenv('REC_BATCH_SIZE', 1))
         self.det_batch_size = int(os.getenv('DET_BATCH_SIZE', 1))
